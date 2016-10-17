@@ -1,6 +1,6 @@
 brick() {
 echo ""
-echo "aparapi was installed in /opt/AMDAPP/aparapi"
+echo "aparapi was installed in /opt/aparapi"
 echo ""
 
 }
