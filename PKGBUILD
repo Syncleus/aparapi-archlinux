@@ -19,7 +19,7 @@ source+=( 'aparapi.conf')
 md5sums+=('d17068edb75da65a7ef620cbd1c876d4')
 
 source+=(https://github.com/Syncleus/aparapi-jni/releases/download/v${pkgver}/libaparapi-${pkgver}-linux.tar.gz)
-md5sums+=('2f779eb870f914b011e5c008e5d17236')
+md5sums+=('775b25632365e89989d015c94d19f073')
 
 package() {
 	mkdir -p "$pkgdir"/{opt/aparapi/lib,etc/profile.d,etc/ld.so.conf.d}
