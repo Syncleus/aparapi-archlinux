@@ -1,8 +1,8 @@
 # Maintainer: Jeffrey Phillips Freeman <jeffrey.freeman@syncleus.com>
 
 pkgname=aparapi
-pkgver=1.0.0
-pkgrel=2
+pkgver=1.1.0
+pkgrel=1
 pkgdesc="Syncleus's GPGPU API for data parallel Java using OpenCL."
 url="https://github.com/Syncleus/aparapi-jni"
 arch=('i686' 'x86_64')
@@ -19,7 +19,7 @@ source+=( 'aparapi.conf')
 md5sums+=('d17068edb75da65a7ef620cbd1c876d4')
 
 source+=(https://github.com/Syncleus/aparapi-jni/releases/download/v${pkgver}/libaparapi-${pkgver}-linux.tar.gz)
-md5sums+=('cc28497f3befd355e4636c333ac6b9ab')
+md5sums+=('5d737816ef887d257a5f41bc1b633c9c')
 
 package() {
 	mkdir -p "$pkgdir"/{opt/aparapi/lib,etc/profile.d,etc/ld.so.conf.d}
@@ -28,7 +28,7 @@ package() {
 	cd ${srcdir}
 	install -m644 aparapi.conf "$pkgdir/etc/ld.so.conf.d/"
 
-      cd libaparapi-${pkgver}
+      cd libaparapi-${pkgver}-linux
       if [ "${CARCH}" = "i686" ]; then
 	install -m755 libaparapi_x86.so "$pkgdir/opt/aparapi/lib"
       elif [ "${CARCH}" = "x86_64" ]; then
