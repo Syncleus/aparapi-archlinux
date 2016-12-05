@@ -1,7 +1,7 @@
 # Maintainer: Jeffrey Phillips Freeman <jeffrey.freeman@syncleus.com>
 
 pkgname=aparapi
-pkgver=1.1.2
+pkgver=1.2.0
 pkgrel=1
 pkgdesc="Syncleus's GPGPU API for data parallel Java using OpenCL."
 url="https://github.com/Syncleus/aparapi-jni"
@@ -19,7 +19,7 @@ source+=( 'aparapi.conf')
 md5sums+=('d17068edb75da65a7ef620cbd1c876d4')
 
 source+=(https://github.com/Syncleus/aparapi-jni/releases/download/v${pkgver}/libaparapi-${pkgver}-linux.tar.gz)
-md5sums+=('509cc60170d3cb1b664979482cff78be')
+md5sums+=('77f26eb314b278345805705fba816a0f')
 
 package() {
 	mkdir -p "$pkgdir"/{opt/aparapi/lib,etc/profile.d,etc/ld.so.conf.d}
